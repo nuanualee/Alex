@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", "Epilogue", sans-serif;
+}
+
+.user img {
+  width: 100px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-1 .container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#section-1 .container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 44px 100px;
+  box-sizing: border-box;
+}
+
+.alex-logo {
+  width: 270px;
+}
+
+.alex-logo img {
+  width: 220px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 17px;
+  /* margin: 0 100px 0 0; */
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+.container .social-links {
+  padding: 0 2px;
+  margin: 8px;
+}
+
+.scroll-down {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  width: 3px;
+  height: 50px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  margin: -12px 7px 0 -3px;
+  top: 10%;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  animation: scroll-down 1.7s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 109%;
+  }
+}
+
+.scroll-down p {
+  position: absolute;
+  top: 19px;
+  left: 5px;
+  color: #fff;
+  font-size: 12px;
+  transform: rotate(90deg);
+}
+
+/* User Registration */
+
+.user ul li {
+  list-style: none;
+  display: inline;
+  margin: 8px;
+}
+
+.user ul li a {
+  text-decoration: none;
+  color: #000;
+  /* margin: 0 100px 0 0; */
+}
+
+.user-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(158, 194, 224);
+  transition: 0.5s;
+}
+
+.user-body.active {
+  background: pink;
+}
+
+.user-body .blueBg.active {
+  background: pink;
+}
+
+.user-container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 200px;
+  /* background: #fff; */
+}
+
+.blueBg {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(187, 213, 238);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.blueBg .box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blueBg .box h2 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.blueBg .box button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+
+.formBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.formBox.active {
+  left: 50%;
+}
+
+.formBox .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transform: 0.5s;
+}
+
+.formBox .loginForm {
+  transition-delay: 0.25s;
+}
+
+.formBox.active .loginForm {
+  left: -100%;
+  transition-delay: 0.25s;
+}
+
+.formBox .signupForm {
+  left: 100%;
+  transition-delay: 0s;
+}
+
+.formBox.active .signupForm {
+  left: 0;
+  transition: 0.25s;
+}
+
+.formBox .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formBox .form form h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.formBox .form form input {
+  width: 75%;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #333;
+}
+
+.formBox .form form input[type="Submit"] {
+  background-color: rgb(158, 194, 224);
+  border: none;
+  color: #fff;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.formBox .form form .forgot-password {
+  color: #333;
+}
+
+.formBox.active .signupForm input[type="submit"] {
+  background: pink;
+}
+
+.formBox .form .signupForm form input #name {
+  display: inline;
+}
+
+#first-name {
+  width: 25%;
+  float: left;
+  clear: right;
+}
+
+#last-name {
+  width: 25%;
+  float: right;
+}
+
+/*Explore*/
+.explore-container {
+  background: rgb(187, 213, 238);
+}
+
+.searchbar-area {
+  margin: 40px auto 0;
+  padding: 20px 40px 40px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 0 6px rgb(0 0 0 / 15%);
+}

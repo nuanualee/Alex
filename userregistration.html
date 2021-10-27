@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up/Log in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!--Navigation Bar-->
+        <div class="navbar">
+            <div class="alex-logo">
+                <a href="index.html"><img src="images/alex_black_ver2.png" alt="Alex"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--Social Links-->    
+            <div class="social-links">
+                <i class="fa fa-twitter fa-lg"></i>
+                <i class="fa fa-instagram fa-lg"></i>
+                <i class="fa fa-facebook fa-lg"></i>
+            
+            </div>
+
+            <!--User-->
+            <div class="user">
+                <ul>
+                    <li><a href="userregistration.html">Sign in</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+    <body class="user-body">
+        <div class="user-container">
+            <div class="blueBg">
+                <div class="box login">
+                    <h2>Already Have An Account?</h2>
+                    <button class="logininButton">Log in</button>
+                </div>
+                <div class="box signin">
+                    <h2>Don't Have An Account?</h2>
+                    <button class="signupButton">Sign up</button>
+                </div>
+            </div>
+            <div class="formBox">
+                <div class="form loginForm">
+                    <form>
+                        <h3>Log in</h3>
+                        <input type="text" placeholder="User ID">
+                        <input type="password" placeholder="Password">
+                        <input type="Submit" value="Login">
+                        <a href="#" class="forgot-password">Forgot your password?</a>
+                    </form>
+                </div>
+                <div class="form signupForm">
+                    <form>
+                        <h3>Sign up</h3>
+                        <input type="text" id ="first-name" placeholder="First Name">
+                        <input type="text" id ="last-name" placeholder="Last Name">
+                        <input type="text" placeholder="User ID">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Address">
+                        <input type="email" placeholder="Email">
+                        <input type="Submit" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const loginBtn = document.querySelector(".logininButton")
+        const signupBtn = document.querySelector(".signupButton")
+        const formBox = document.querySelector(".formBox")
+        const body = document.querySelector(".user-body")
+        const bg = document.querySelector(".blueBg")
+
+
+        signupBtn.onclick = function(){
+            formBox.classList.add("active")
+            body.classList.add("active")
+            bg.classList.add("active")
+        }
+
+        loginBtn.onclick = function(){
+            formBox.classList.remove("active")
+            body.classList.remove("active")
+            bg.classList.remove("active")
+        }
+
+    </script>
+
+</body>
+</html>
