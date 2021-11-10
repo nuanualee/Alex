@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex - The One Stop Place for Restaurant Reviews</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -45,28 +46,45 @@
 
     <section id="section-explore">
         <div class="explore-container">
-            <div class="tabs">
-                <div class="searchbar-tab">
-                    <div class="active">
-                        <p>Search Area/Cuisine/Rating</p>
-                    </div>
-                    <div>
-                        <p>Search by Keyword</p>
-                    </div>
+            <div class="explore">
+                <div class="btn-box">
+                    <button id="btn1" onclick="openAreaCuisineRating()">Search Area/Cuisine/Rating</button>
+                    <button id="btn2" onclick="openKeyword()">Search by Keyword</button>
                 </div>
-                <div class="searchbar-area">
-                    <div class="active">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Obcaecati sequi temporibus officiis accusamus quis consectetur optio! 
-                            Non asperiores repudiandae debitis consequuntur obcaecati assumenda 
-                            delectus ea dolores voluptatum voluptatem, ipsa dolorem?</p>
-                    </div>
 
+                <div id="search1" class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aut, eius beatae sunt incidunt odit illum quas similique sed accusantium vitae aspernatur sapiente. Commodi fugiat, possimus distinctio ut deserunt dicta?</p>
+                </div>
+                <div id="search2"class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aut, eius beatae sunt incidunt odit illum quas similique sed accusantium vitae aspernatur sapiente. Commodi fugiat, possimus distinctio ut deserunt dicta?</p>
                 </div>
             </div>
-
         </div>
     </section>
+
+    <script>
+        var search1 = document.getElementById("search1")
+        var search2 = document.getElementById("search2")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+
+        function openAreaCuisineRating(){
+            search1.style.transform = "translateX(0)"
+            search2.style.transform = "translateX(100%)"
+            btn1.style.color = "#000"
+            btn2.style.color = "#B39F95"
+            btn1.style.fontWeight = "bold"
+            btn2.style.fontWeight = "normal"
+        }
+        function openKeyword(){
+            search1.style.transform = "translateX(100%)"
+            search2.style.transform = "translateX(0)"
+            btn1.style.color = "#B39F95"
+            btn2.style.color = "#000"
+            btn1.style.fontWeight = "normal"
+            btn2.style.fontWeight = "bold"
+        }
+    </script>
     
 </body>
 </html>
